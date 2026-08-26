@@ -1,0 +1,14 @@
+@import "./core.css";
+
+/* Algorithmica Solutions — violet brand. */
+:root {
+  --accent: #8b5cf6;
+  --accent-2: #6d28d9;
+  --accent-soft: rgba(139, 92, 246, 0.12);
+  --accent-faint: rgba(139, 92, 246, 0.18);
+  --accent-glow: rgba(139, 92, 246, 0.35);
+  --accent-dot-glow: rgba(139, 92, 246, 0.18);
+  --accent-core-glow: rgba(139, 92, 246, 0.4);
+  --accent-card-glow: rgba(139, 92, 246, 0.08);
+  --on-accent: #1a0a3a;
+}

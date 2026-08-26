@@ -1,0 +1,127 @@
+@import "./core.css";
+
+/* ALGO — orange brand. */
+:root {
+  --accent: #ffa200;
+  --accent-2: #ff8a00;
+  --accent-soft: rgba(255, 162, 0, 0.12);
+  --accent-faint: rgba(255, 162, 0, 0.18);
+  --accent-glow: rgba(255, 162, 0, 0.35);
+  --accent-dot-glow: rgba(255, 162, 0, 0.18);
+  --accent-core-glow: rgba(255, 162, 0, 0.4);
+  --accent-card-glow: rgba(255, 162, 0, 0.08);
+  --on-accent: #1a1100;
+  --green: #2bd4a0;
+  --green-faint: rgba(43, 212, 160, 0.1);
+}
+
+html[data-theme="light-gray"] {
+  --bg: #d1d5db;
+  --bg-2: #e5e7eb;
+  --bg-3: #c4c8ce;
+  --surface: rgba(0, 0, 0, 0.03);
+  --surface-2: rgba(0, 0, 0, 0.06);
+  --border: rgba(0, 0, 0, 0.1);
+  --border-strong: rgba(0, 0, 0, 0.18);
+  --text: #1f2937;
+  --text-dim: #4b5563;
+  --text-faint: #6b7280;
+  --text-strong: #111827;
+  --nav-bg: rgba(229, 231, 235, 0.7);
+  --nav-bg-scrolled: rgba(229, 231, 235, 0.92);
+  --nav-bg-mobile: rgba(229, 231, 235, 0.98);
+  --feature-overlay: rgba(209, 213, 219, 0.6);
+  --hero-bg-start: #d1d5db;
+  --hero-bg-end: #e5e7eb;
+  --cta-bg: #1f2937;
+  --cta-bg-hover: #374151;
+  --grid-line: rgba(0, 0, 0, 0.06);
+  --grid-line-soft: rgba(0, 0, 0, 0.05);
+  --grid-line-cta: rgba(0, 0, 0, 0.08);
+  --mesh-line: rgba(255, 255, 255, 0.05);
+  --mesh-line-soft: rgba(255, 255, 255, 0.03);
+  --panel-bg: rgba(229, 231, 235, 0.6);
+  --panel-border: rgba(255, 255, 255, 0.35);
+  --bg-image-fade: linear-gradient(180deg, rgba(209, 213, 219, 0.45) 0%, rgba(209, 213, 219, 0.75) 100%);
+  --accent-faint: rgba(255, 162, 0, 0.16);
+  --accent-dot-glow: rgba(255, 162, 0, 0.22);
+  --accent-core-glow: rgba(255, 162, 0, 0.3);
+  --accent-card-glow: rgba(255, 162, 0, 0.1);
+  --green-faint: rgba(43, 212, 160, 0.14);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-2: 0 20px 50px -20px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="white"] {
+  --bg: #fff;
+  --bg-2: #f9fafb;
+  --bg-3: #f3f4f6;
+  --surface: rgba(0, 0, 0, 0.02);
+  --surface-2: rgba(0, 0, 0, 0.04);
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.14);
+  --text: #111827;
+  --text-dim: #4b5563;
+  --text-faint: #6b7280;
+  --text-strong: #000;
+  --nav-bg: rgba(255, 255, 255, 0.7);
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.92);
+  --nav-bg-mobile: rgba(255, 255, 255, 0.98);
+  --feature-overlay: rgba(255, 255, 255, 0.55);
+  --hero-bg-start: #fff;
+  --hero-bg-end: #f9fafb;
+  --cta-bg: #111827;
+  --cta-bg-hover: #1f2937;
+  --grid-line: rgba(0, 0, 0, 0.04);
+  --grid-line-soft: rgba(0, 0, 0, 0.035);
+  --grid-line-cta: rgba(0, 0, 0, 0.06);
+  --mesh-line: rgba(255, 255, 255, 0.06);
+  --mesh-line-soft: rgba(255, 255, 255, 0.03);
+  --panel-bg: rgba(255, 255, 255, 0.6);
+  --panel-border: rgba(255, 255, 255, 0.6);
+  --bg-image-fade: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.7) 100%);
+  --accent-faint: rgba(255, 162, 0, 0.14);
+  --accent-dot-glow: rgba(255, 162, 0, 0.2);
+  --accent-core-glow: rgba(255, 162, 0, 0.35);
+  --accent-card-glow: rgba(255, 162, 0, 0.08);
+  --green-faint: rgba(43, 212, 160, 0.12);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 20px 50px -20px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="ice"] {
+  --bg: #eef5fb;
+  --bg-2: #e1edf6;
+  --bg-3: #d3e3f0;
+  --surface: rgba(15, 50, 90, 0.03);
+  --surface-2: rgba(15, 50, 90, 0.06);
+  --border: rgba(15, 50, 90, 0.1);
+  --border-strong: rgba(15, 50, 90, 0.18);
+  --text: #0f2540;
+  --text-dim: #3a5a7a;
+  --text-faint: #5e7a96;
+  --text-strong: #0a1a2e;
+  --nav-bg: rgba(238, 245, 251, 0.7);
+  --nav-bg-scrolled: rgba(238, 245, 251, 0.92);
+  --nav-bg-mobile: rgba(238, 245, 251, 0.98);
+  --feature-overlay: rgba(211, 227, 240, 0.6);
+  --hero-bg-start: #eef5fb;
+  --hero-bg-end: #e1edf6;
+  --cta-bg: #0f2540;
+  --cta-bg-hover: #1a3a5a;
+  --grid-line: rgba(15, 50, 90, 0.05);
+  --grid-line-soft: rgba(15, 50, 90, 0.04);
+  --grid-line-cta: rgba(15, 50, 90, 0.06);
+  --mesh-line: rgba(255, 255, 255, 0.05);
+  --mesh-line-soft: rgba(255, 255, 255, 0.03);
+  --panel-bg: rgba(238, 245, 251, 0.6);
+  --panel-border: rgba(255, 255, 255, 0.5);
+  --bg-image-fade: linear-gradient(180deg, rgba(211, 227, 240, 0.4) 0%, rgba(211, 227, 240, 0.7) 100%);
+  --accent-faint: rgba(255, 162, 0, 0.14);
+  --accent-dot-glow: rgba(255, 162, 0, 0.2);
+  --accent-core-glow: rgba(255, 162, 0, 0.32);
+  --accent-card-glow: rgba(255, 162, 0, 0.08);
+  --green-faint: rgba(43, 212, 160, 0.14);
+  --shadow-1: 0 1px 2px rgba(15, 50, 90, 0.08);
+  --shadow-2: 0 20px 50px -20px rgba(15, 50, 90, 0.18);
+}

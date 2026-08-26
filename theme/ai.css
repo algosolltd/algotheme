@@ -1,0 +1,14 @@
+@import "./core.css";
+
+/* AI — blue brand. */
+:root {
+  --accent: #4a9eff;
+  --accent-2: #1e6fd9;
+  --accent-soft: rgba(74, 158, 255, 0.12);
+  --accent-faint: rgba(74, 158, 255, 0.18);
+  --accent-glow: rgba(74, 158, 255, 0.35);
+  --accent-dot-glow: rgba(74, 158, 255, 0.18);
+  --accent-core-glow: rgba(74, 158, 255, 0.4);
+  --accent-card-glow: rgba(74, 158, 255, 0.08);
+  --on-accent: #001a3a;
+}

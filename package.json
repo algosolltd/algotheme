@@ -1,0 +1,31 @@
+{
+  "name": "@algosolltd/algotheme",
+  "version": "0.1.0",
+  "description": "Shared Algorithmica visual themes and CSS components.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "files": [
+    "theme",
+    "components",
+    "README.md"
+  ],
+  "exports": {
+    "./theme/*": "./theme/*",
+    "./components/*": "./components/*",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "check": "npm pack --dry-run"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algosolltd/algotheme.git"
+  }
+}
