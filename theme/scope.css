@@ -1,0 +1,40 @@
+/* Scoped Algorithmica design tokens for embedding (avoids global :root collisions). */
+
+.alg-theme {
+  --bg: #0a0e14;
+  --bg-2: #0f141c;
+  --bg-3: #151b25;
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-2: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text: #e8ecf2;
+  --text-dim: #a3acba;
+  --text-faint: #6b7484;
+  --text-strong: #fff;
+
+  --accent: #8b5cf6;
+  --accent-2: #6d28d9;
+  --accent-soft: rgba(139, 92, 246, 0.12);
+  --accent-faint: rgba(139, 92, 246, 0.18);
+  --accent-glow: rgba(139, 92, 246, 0.35);
+  --accent-dot-glow: rgba(139, 92, 246, 0.18);
+  --accent-core-glow: rgba(139, 92, 246, 0.4);
+  --accent-card-glow: rgba(139, 92, 246, 0.08);
+  --on-accent: #1a0a3a;
+
+  --green: #4dd0e1;
+  --green-faint: rgba(77, 208, 225, 0.1);
+  --danger: #ff5b5b;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 22px;
+  --max: 1240px;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 20px 50px -20px rgba(0, 0, 0, 0.7);
+}

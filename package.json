@@ -1,6 +1,6 @@
 {
   "name": "@algosolltd/algotheme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared Algorithmica visual themes and CSS components.",
   "type": "module",
   "license": "UNLICENSED",
@@ -27,7 +27,7 @@
     "check": "npm pack --dry-run"
   },
   "publishConfig": {
-    "access": "restricted",
+    "access": "public",
     "registry": "https://npm.pkg.github.com"
   },
   "repository": {
