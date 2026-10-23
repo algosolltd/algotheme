@@ -40,6 +40,24 @@ with `data-theme` on the `html` element.
 The CSS references Inter, Space Grotesk, and JetBrains Mono but does not bundle
 font files. Consumers remain responsible for loading those fonts.
 
+## Auth / login module
+
+Reusable Google-only login and landing, framework-agnostic:
+
+- `theme/core.css` + `components/auth.css` (styles: `.alg-auth*`, `.alg-landing*`)
+- `templates/login.html` (copy/adapt as the login page)
+- `assets/logo.png`, `assets/favicon.ico`
+- `client/firebase-auth.js` (Firebase popup → `POST /api/auth/session`)
+
+The host app must expose:
+
+- `GET /api/auth/firebase-config` → Firebase web config (public)
+- `POST /api/auth/session` with `{ idToken }` → creates the session
+
+React tools can import `components/auth.css` and reuse the same markup/classes.
+Python tools can serve `templates/login.html` and mount `client/firebase-auth.js`
+as static assets.
+
 ## Development
 
 Run the package-content check before publishing:

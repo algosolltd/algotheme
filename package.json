@@ -7,11 +7,17 @@
   "files": [
     "theme",
     "components",
+    "assets",
+    "templates",
+    "client",
     "README.md"
   ],
   "exports": {
     "./theme/*": "./theme/*",
     "./components/*": "./components/*",
+    "./assets/*": "./assets/*",
+    "./templates/*": "./templates/*",
+    "./client/*": "./client/*",
     "./package.json": "./package.json"
   },
   "sideEffects": [
