@@ -1,3 +1,5 @@
+@import "./fonts.css";
+
 /* Shared Algorithmica design tokens. Brand stylesheets override accents. */
 
 :root {

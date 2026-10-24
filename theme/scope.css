@@ -1,3 +1,5 @@
+@import "./fonts.css";
+
 /* Scoped Algorithmica design tokens for embedding (avoids global :root collisions). */
 
 .alg-theme {

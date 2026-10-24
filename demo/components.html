@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Componenti - Algorithmica</title>
+<link rel="icon" href="../assets/favicon.ico">
+<link rel="stylesheet" href="../theme/core.css">
+<link rel="stylesheet" href="../components/ui.css">
+<link rel="stylesheet" href="../components/shell.css">
+</head>
+<body>
+<div class="alg-app">
+  <aside class="alg-rail">
+    <a class="alg-rail__brand" href="#" title="Algorithmica">
+      <img src="../assets/logo.png" alt="Algorithmica">
+      <span class="alg-rail__label">Algorithmica</span>
+    </a>
+    <nav class="alg-rail__nav">
+      <p class="alg-rail__section">Workspace</p>
+      <a class="alg-rail__item is-active" href="#" title="Dashboard">
+        <svg class="alg-rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg>
+        <span class="alg-rail__label">Dashboard</span>
+      </a>
+      <a class="alg-rail__item" href="#" title="Valutazioni">
+        <svg class="alg-rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        <span class="alg-rail__label">Valutazioni</span>
+        <span class="alg-rail__badge">12</span>
+      </a>
+      <a class="alg-rail__item" href="#" title="Report">
+        <svg class="alg-rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m4 14V9m4 10V3m4 16v-7m4 7V7"/></svg>
+        <span class="alg-rail__label">Report</span>
+      </a>
+      <p class="alg-rail__section">Sistema</p>
+      <a class="alg-rail__item" href="#" title="Impostazioni">
+        <svg class="alg-rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        <span class="alg-rail__label">Impostazioni</span>
+      </a>
+    </nav>
+    <div class="alg-rail__footer">
+      <img src="../assets/logo.png" alt="" width="22" height="22">
+      <span class="alg-rail__label">account@algorithmicasolutions.com</span>
+    </div>
+  </aside>
+
+  <button class="alg-rail-scrim" type="button" aria-label="Chiudi menu" onclick="closeRail()" tabindex="-1"></button>
+
+  <header class="alg-topbar">
+    <button class="alg-rail-toggle" type="button" aria-label="Mostra o nascondi il menu" aria-expanded="true" onclick="toggleRail()">
+      <svg class="alg-rail-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <span class="alg-topbar__title">Dashboard</span>
+    <div class="alg-topbar__actions">
+      <button class="alg-btn-secondary" type="button" onclick="toggleDialog(true)">Apri dialog</button>
+      <button class="alg-btn-primary" type="button" onclick="toggleToast(true)">Mostra toast</button>
+    </div>
+  </header>
+
+  <main class="alg-main">
+    <div class="alg-main__header">
+      <div>
+        <h1 class="alg-main__title">Panoramica</h1>
+        <p class="alg-main__subtitle">Stato delle valutazioni e delle acquisizioni.</p>
+      </div>
+      <button class="alg-btn-primary" type="button">Nuova valutazione</button>
+    </div>
+
+    <div class="alg-banner alg-banner--info" style="margin-bottom: 16px;">
+      <svg class="alg-banner__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      <div class="alg-banner__body">
+        <p class="alg-banner__title">Aggiornamento disponibile</p>
+        <p class="alg-banner__text">Sono presenti 3 nuove acquisizioni da revisionare.</p>
+      </div>
+      <button class="alg-banner__close" type="button" aria-label="Chiudi">&times;</button>
+    </div>
+
+    <div class="alg-banner alg-banner--success" style="margin-bottom: 16px;">
+      <div class="alg-banner__body">
+        <p class="alg-banner__title">Sync completata</p>
+        <p class="alg-banner__text">Tutti i dati sono aggiornati alle 10:31.</p>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+      <span class="alg-badge badge-watch">Watch</span>
+      <span class="alg-badge badge-pass">Pass</span>
+      <span class="alg-badge badge-good">Good</span>
+      <span class="alg-badge badge-bad">Fail</span>
+      <span class="alg-badge badge-neutral">Neutral</span>
+    </div>
+
+    <div class="alg-card" style="padding: 16px; margin-bottom: 16px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+        <strong style="color: var(--text-strong);">Ultime valutazioni</strong>
+        <span class="alg-badge badge-neutral" style="margin-left: auto;">24 righe</span>
+      </div>
+      <div class="alg-table-wrap alg-table-wrap--scroll">
+        <table class="alg-table alg-table--sticky alg-table--zebra">
+          <thead>
+            <tr>
+              <th>Azienda</th>
+              <th>Settore</th>
+              <th class="alg-table__num">Score</th>
+              <th>Stato</th>
+              <th>Aggiornato</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Northwind Labs</strong></td><td>SaaS</td><td class="alg-table__num">92</td><td><span class="alg-badge badge-good">Good</span></td><td>10:24</td></tr>
+            <tr><td><strong>Blue Harbor</strong></td><td>Fintech</td><td class="alg-table__num">81</td><td><span class="alg-badge badge-pass">Pass</span></td><td>09:58</td></tr>
+            <tr><td><strong>Cedar &amp; Co</strong></td><td>Retail</td><td class="alg-table__num">64</td><td><span class="alg-badge badge-watch">Watch</span></td><td>09:41</td></tr>
+            <tr><td><strong>Delta Works</strong></td><td>Logistica</td><td class="alg-table__num">48</td><td><span class="alg-badge badge-bad">Fail</span></td><td>09:12</td></tr>
+            <tr><td><strong>Everline</strong></td><td>Media</td><td class="alg-table__num">77</td><td><span class="alg-badge badge-pass">Pass</span></td><td>08:55</td></tr>
+            <tr><td><strong>Fjord Systems</strong></td><td>Industrial</td><td class="alg-table__num">88</td><td><span class="alg-badge badge-good">Good</span></td><td>08:40</td></tr>
+            <tr><td><strong>Granite AI</strong></td><td>AI</td><td class="alg-table__num">95</td><td><span class="alg-badge badge-good">Good</span></td><td>08:21</td></tr>
+            <tr><td><strong>Harbor Health</strong></td><td>Health</td><td class="alg-table__num">59</td><td><span class="alg-badge badge-watch">Watch</span></td><td>08:03</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <nav class="alg-pagination" aria-label="Paginazione">
+        <button class="alg-pagination__item" type="button" disabled>&lsaquo;</button>
+        <button class="alg-pagination__item is-active" type="button">1</button>
+        <button class="alg-pagination__item" type="button">2</button>
+        <button class="alg-pagination__item" type="button">3</button>
+        <span class="alg-pagination__ellipsis">&hellip;</span>
+        <button class="alg-pagination__item" type="button">8</button>
+        <button class="alg-pagination__item" type="button">&rsaquo;</button>
+        <span class="alg-pagination__info">1-8 di 64</span>
+      </nav>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 16px;">
+      <div class="alg-chart">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px;">
+          <strong style="color: var(--text-strong);">Score medi</strong>
+          <span class="alg-sparkline" aria-hidden="true">
+            <span class="alg-sparkline__bar" style="height: 30%"></span>
+            <span class="alg-sparkline__bar" style="height: 55%"></span>
+            <span class="alg-sparkline__bar" style="height: 40%"></span>
+            <span class="alg-sparkline__bar" style="height: 70%"></span>
+            <span class="alg-sparkline__bar" style="height: 62%"></span>
+            <span class="alg-sparkline__bar" style="height: 85%"></span>
+          </span>
+        </div>
+        <div class="alg-chart__bars">
+          <div class="alg-chart__grid"></div>
+          <div class="alg-chart__bar" style="height: 42%"></div>
+          <div class="alg-chart__bar" style="height: 58%"></div>
+          <div class="alg-chart__bar" style="height: 36%"></div>
+          <div class="alg-chart__bar" style="height: 74%"></div>
+          <div class="alg-chart__bar" style="height: 66%"></div>
+          <div class="alg-chart__bar" style="height: 88%"></div>
+          <div class="alg-chart__bar is-muted" style="height: 28%"></div>
+        </div>
+        <div class="alg-chart__legend">
+          <span><i class="alg-chart__swatch"></i> Score</span>
+          <span><i class="alg-chart__swatch" style="background: var(--text-faint);"></i> Nessun dato</span>
+        </div>
+      </div>
+
+      <form class="alg-form alg-card" style="padding: 16px;" onsubmit="return false;">
+        <div class="alg-form-grid">
+          <div class="alg-field">
+            <label class="alg-label" for="in-name">Nome <span class="alg-label__req">*</span></label>
+            <input class="alg-input" id="in-name" type="text" placeholder="Northwind Labs">
+          </div>
+          <div class="alg-field">
+            <label class="alg-label" for="in-sector">Settore</label>
+            <select class="alg-input" id="in-sector">
+              <option>SaaS</option>
+              <option>Fintech</option>
+              <option>Retail</option>
+            </select>
+          </div>
+        </div>
+        <div class="alg-field">
+          <label class="alg-label" for="in-notes">Note</label>
+          <textarea class="alg-input alg-textarea" id="in-notes" placeholder="Annotazioni sulla valutazione"></textarea>
+          <p class="alg-help">Massimo 500 caratteri.</p>
+        </div>
+        <div class="alg-field is-invalid">
+          <label class="alg-label" for="in-email">Email</label>
+          <input class="alg-input" id="in-email" type="email" value="non-valida" aria-invalid="true">
+          <p class="alg-error-text">Inserisci un indirizzo email valido.</p>
+        </div>
+        <label class="alg-check">
+          <input class="alg-check__input" type="checkbox" checked>
+          Includi nel report settimanale
+        </label>
+        <label class="alg-switch">
+          <input class="alg-switch__input" type="checkbox" checked>
+          <span class="alg-switch__track"></span>
+          Notifiche attive
+        </label>
+        <div style="display: flex; gap: 8px;">
+          <button class="alg-btn-primary" type="submit">Salva</button>
+          <button class="alg-btn-secondary" type="reset">Annulla</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+
+<div class="alg-modal-backdrop" id="demo-dialog" hidden>
+  <div class="alg-dialog" role="dialog" aria-modal="true" aria-labelledby="demo-dialog-title" style="width: min(440px, calc(100vw - 32px));">
+    <div class="alg-modal-header">
+      <div>
+        <h2 class="alg-modal-title" id="demo-dialog-title">Eliminare la valutazione?</h2>
+        <p class="alg-modal-desc">L'operazione non puo essere annullata.</p>
+      </div>
+      <button class="alg-modal-close" type="button" aria-label="Chiudi" onclick="toggleDialog(false)">&times;</button>
+    </div>
+    <div class="alg-modal-body">
+      <p style="margin: 0;">La valutazione di <strong>Northwind Labs</strong> verra rimossa definitivamente.</p>
+    </div>
+    <div class="alg-modal-footer">
+      <button class="alg-btn-secondary" type="button" onclick="toggleDialog(false)">Annulla</button>
+      <button class="alg-btn-primary" type="button" onclick="toggleDialog(false)">Elimina</button>
+    </div>
+  </div>
+</div>
+
+<div class="alg-toast-region" id="demo-toast" hidden>
+  <div class="alg-toast alg-toast--success" role="status">
+    <div class="alg-toast__body">
+      <p class="alg-toast__title">Salvato</p>
+      <p class="alg-toast__text">La valutazione e stata aggiornata.</p>
+    </div>
+    <button class="alg-toast__close" type="button" aria-label="Chiudi" onclick="toggleToast(false)">&times;</button>
+  </div>
+</div>
+
+<script>
+  const appRoot = document.querySelector(".alg-app");
+  const railToggle = document.querySelector(".alg-rail-toggle");
+  const mobileRail = window.matchMedia("(max-width: 900px)");
+
+  function syncRail() {
+    const expanded = mobileRail.matches
+      ? appRoot.classList.contains("is-rail-open")
+      : !appRoot.classList.contains("is-rail-collapsed");
+    railToggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+  }
+
+  function toggleRail() {
+    if (mobileRail.matches) {
+      appRoot.classList.toggle("is-rail-open");
+    } else {
+      appRoot.classList.toggle("is-rail-collapsed");
+    }
+    syncRail();
+  }
+
+  function closeRail() {
+    appRoot.classList.remove("is-rail-open");
+    syncRail();
+  }
+
+  mobileRail.addEventListener("change", () => {
+    appRoot.classList.remove("is-rail-open");
+    syncRail();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeRail();
+  });
+
+  document.querySelectorAll(".alg-rail__item").forEach((item) => {
+    item.addEventListener("click", () => {
+      if (mobileRail.matches) closeRail();
+    });
+  });
+
+  syncRail();
+
+  function toggleDialog(open) {
+    document.getElementById("demo-dialog").hidden = !open;
+  }
+  function toggleToast(open) {
+    document.getElementById("demo-toast").hidden = !open;
+    if (open) setTimeout(() => toggleToast(false), 4000);
+  }
+</script>
+</body>
+</html>
