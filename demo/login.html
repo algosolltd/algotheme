@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo landing - AlgoFLIP</title>
+<link rel="icon" href="../assets/favicon.ico">
+<link rel="stylesheet" href="../theme/core.css">
+<link rel="stylesheet" href="../components/auth.css">
+<style>body { margin: 0; }</style>
+</head>
+<body>
+<main class="alg-auth">
+  <div class="alg-auth-shell">
+    <section class="alg-auth-hero">
+      <p class="alg-auth-eyebrow">AlgoFLIP · demo</p>
+      <h1 class="alg-auth-headline">
+        Acquisizioni e uplift,<br><span class="alg-gradient">sotto controllo.</span>
+      </h1>
+      <p class="alg-auth-lead">
+        Valuta, confronta e gestisci micro-acquisizioni con dati verificabili e un workspace personale.
+      </p>
+      <div class="alg-auth-chips">
+        <span class="alg-auth-chip">Assessment</span>
+        <span class="alg-auth-chip">DD review</span>
+        <span class="alg-auth-chip">Post-acquisition tracker</span>
+      </div>
+    </section>
+    <section class="alg-auth-card">
+      <div class="alg-auth-brand">
+        <img src="../assets/logo.png" alt="Algorithmica">
+      </div>
+      <h2 class="alg-auth-title">Accedi ad AlgoFLIP</h2>
+      <p class="alg-auth-sub">Accedi con il tuo account Google @algorithmicasolutions.com.</p>
+      <button id="alg-google" class="alg-auth-google" type="button">Accedi con Google</button>
+      <p id="alg-error" class="alg-auth-error" role="alert" hidden>Demo: il login Google è disattivato.</p>
+      <p class="alg-auth-foot">© Algorithmica Solutions</p>
+    </section>
+  </div>
+</main>
+<script>
+  document.getElementById("alg-google").addEventListener("click", () => {
+    document.getElementById("alg-error").hidden = false;
+  });
+</script>
+</body>
+</html>
