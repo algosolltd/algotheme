@@ -37,8 +37,9 @@ All themes inherit the shared primitives from `theme/core.css`. The ALGO theme
 also preserves the existing `light-gray`, `white`, and `ice` variants selected
 with `data-theme` on the `html` element.
 
-The CSS references Inter, Space Grotesk, and JetBrains Mono but does not bundle
-font files. Consumers remain responsible for loading those fonts.
+Fonts are bundled: import `theme/fonts.css` to load Inter, Space Grotesk and
+JetBrains Mono. The woff2 files live in `assets/fonts/` and are self-hosted, so
+they work offline and under a strict CSP (`default-src 'self'`).
 
 ## Auth / login module
 
