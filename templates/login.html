@@ -10,20 +10,36 @@
   </head>
   <body>
     <main class="alg-auth">
-      <section class="alg-auth-card">
-        <div class="alg-auth-brand">
-          <img src="../assets/logo.png" alt="Algorithmica" />
-        </div>
-        <h1 class="alg-auth-title">Accedi</h1>
-        <p class="alg-auth-sub">
-          Accedi con il tuo account Google @algorithmicasolutions.com.
-        </p>
-        <button id="alg-google" class="alg-auth-google" type="button">
-          Accedi con Google
-        </button>
-        <p id="alg-error" class="alg-auth-error" role="alert" hidden></p>
-        <p class="alg-auth-foot">© Algorithmica Solutions</p>
-      </section>
+      <div class="alg-auth-shell">
+        <section class="alg-auth-hero">
+          <p class="alg-auth-eyebrow">Algorithmica Solutions</p>
+          <h1 class="alg-auth-headline">
+            Intelligence operativa,<br /><span class="alg-gradient">senza attrito.</span>
+          </h1>
+          <p class="alg-auth-lead">
+            Un unico accesso per conoscenza, clienti, agenti e acquisizioni.
+          </p>
+          <div class="alg-auth-chips">
+            <span class="alg-auth-chip">Google Workspace</span>
+            <span class="alg-auth-chip">Sicuro per design</span>
+            <span class="alg-auth-chip">Un solo account</span>
+          </div>
+        </section>
+        <section class="alg-auth-card">
+          <div class="alg-auth-brand">
+            <img src="../assets/logo.png" alt="Algorithmica" />
+          </div>
+          <h2 class="alg-auth-title">Accedi</h2>
+          <p class="alg-auth-sub">
+            Accedi con il tuo account Google @algorithmicasolutions.com.
+          </p>
+          <button id="alg-google" class="alg-auth-google" type="button" disabled>
+            Accedi con Google
+          </button>
+          <p id="alg-error" class="alg-auth-error" role="alert" hidden></p>
+          <p class="alg-auth-foot">© Algorithmica Solutions</p>
+        </section>
+      </div>
     </main>
     <script type="module" src="../client/firebase-auth.js"></script>
   </body>
