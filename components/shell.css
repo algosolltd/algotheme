@@ -214,6 +214,97 @@ aside { background: var(--bg-2) !important; }
   gap: 8px;
 }
 
+.alg-rail__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  padding: 7px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.alg-rail__avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--on-accent);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.alg-rail__user-meta {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.alg-rail__user-name {
+  color: var(--text-strong);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alg-rail__user-sub {
+  color: var(--text-faint);
+  font-size: 10px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alg-rail__user-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: none;
+}
+
+.alg-rail__user-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: background 0.15s var(--ease), color 0.15s var(--ease), border-color 0.15s var(--ease);
+}
+
+.alg-rail__user-action:hover {
+  background: var(--surface-2);
+  color: var(--text-strong);
+  border-color: var(--border-strong);
+}
+
+.alg-rail__user-action--danger:hover {
+  background: rgba(255, 91, 91, 0.1);
+  border-color: rgba(255, 91, 91, 0.4);
+  color: var(--danger);
+}
+
+.alg-rail__user-action svg {
+  width: 14px;
+  height: 14px;
+}
+
 .alg-topbar {
   grid-area: topbar;
   position: sticky;
@@ -341,6 +432,20 @@ aside { background: var(--bg-2) !important; }
   .alg-app.is-rail-collapsed .alg-rail__footer {
     justify-content: center;
     padding: 12px 0 4px;
+  }
+
+  .alg-app.is-rail-collapsed .alg-rail__user {
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .alg-app.is-rail-collapsed .alg-rail__user-meta {
+    display: none;
+  }
+
+  .alg-app.is-rail-collapsed .alg-rail__user-actions {
+    flex-direction: column;
   }
 }
 
